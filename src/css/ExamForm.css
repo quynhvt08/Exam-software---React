@@ -1,0 +1,198 @@
+/* Header/Blog Title */
+.header {
+  padding: 18px;
+  background-image: linear-gradient(to right, #344e9c, #5a7ad9, #9eb2ef);
+  display: flex; /* Sử dụng flexbox để sắp xếp logo và tiêu đề */
+  align-items: center; /* Căn giữa các items  chiều dọc */
+}
+
+.header .button-finish {
+  margin: 10px 0px 10px auto; /* Sử dụng margin-left: auto để nút nằm bên phải */
+  background-color: #f42222; /* Màu nền */
+  padding: 15px 30px; /* Kích thước đệm */
+  color: #fff; /* Màu chữ */
+  cursor: pointer; /* Con trỏ */
+  border: none; /* Loại bỏ viền */
+  font-size: 20px; /* Kích thước chữ */
+  border-radius: 3em; /* Bo tròn viền */
+  border-bottom: 3px solid #3d2b2b; /* Viền dưới */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu khi hover */
+}
+
+.button-finish:hover {
+  background-color: #c40000; /* Màu nền khi hover */
+  color: #f0f0f0; /* Màu chữ khi hover */
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.left-column {
+  float: left;
+  background-color: #ffffff;
+  width: 70%;
+  text-align: center;
+}
+
+/* Right column */
+.right-column {
+  float: left;
+  background-color: #ffffff;
+  width:30%;
+  text-align: center;
+}
+
+/* Add a card effect for articles */
+.card-left {
+  margin: 20px 20px 0 20px;
+}
+
+.card-left-answer {
+  margin: 20px 10px 0 20px;
+  padding: 20px 20px;
+  border-top: 2px solid #ccc; /* Định dạng viền: 1 pixel, solid (liền), màu xám */
+}
+
+.card-left img {
+  width: 100%;
+  height: 100%;
+  margin: 10px 10px 10px 10px;
+}
+.card-left .khung{
+  width: 50px;
+}
+
+label {
+  margin-right: 100px;
+  font-size: 20px;
+}
+
+/* Tạo kiểu cho nhãn của các nút radio */
+label span {
+  font-weight: bold;
+}
+
+/* Tạo kiểu cho nút radio */
+input[type="radio"] {
+  margin-right:10px;
+  transform: scale(1.5); /* Thay đổi kích thước của nút lên 1.5 lần */
+}
+
+/* Tạo kiểu cho phần hiển thị đáp án đã chọn */
+.selected-answer {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-left .form-infor-exam{
+  color: #007bff;
+  width:50%;
+}
+.card-left .form-infor-user{
+  color: #007bff;
+  width:50%;
+}
+
+.card-right {
+  background-color:  rgb(221, 229, 255);
+  padding: 20px;
+  height: 100%;
+}
+
+.card-right .time {
+  margin:20px 10px 10px 10px; /* Đặt phần tử .time ở bên phải */
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 24px; /* Giảm kích thước font */
+  padding: 8px 15px; /* Giảm khoảng cách padding */
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.card-h3{
+  color: #3400ae;
+  font-size: 20px;
+  font-weight: bold; /* Đặt chữ đậm */
+}
+.card-h4{
+  float: left;
+  color:  #de0202;
+  font-size: 20px;
+  font-weight: bold; /* Đặt chữ đậm */
+}
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: rgb(168, 187, 255);
+  margin-top: 20px;
+  display: flex; /* Sử dụng flexbox để sắp xếp logo và tiêu đề */
+  align-items: center; /* Căn giữa các items  chiều dọc */
+}
+
+.button-list {
+  margin-bottom: 20px;
+  text-align: left; /* hoặc text-align: initial; */
+  margin-top: 15px;
+}
+  
+.page-button {
+  margin: 10px 0 10px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  width: 45px; /* Đặt chiều rộng của nút */
+  height: 35px; /* Đặt chiều cao của nút */
+  font-size: 15px;
+  border-bottom: 2px solid rgb(16, 0, 122); /* Màu và kích thước của gạch ngang */
+}
+
+.table-quesitons{
+  margin: 15px 10px 10px 10px;
+  padding: 10px;
+  background-color: #545454;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.type {
+  margin: 15px 0px 10px 10px;
+  width: 20px; /* Đặt chiều rộng của nút */
+  height: 20px; /* Đặt chiều cao của nút */
+  border-radius: 50%;
+  display: flex; /* Sử dụng flexbox */
+  align-items: center; /* Canh giữa theo chiều dọc */
+}
+
+.type .text {
+  padding: 0 30px; /* Tạo khoảng cách giữa văn bản và nút */
+  white-space: nowrap; /* Chặn văn bản xuống hàng */
+}
+
+.page-button:hover {
+  background-color: #0056b3;
+}
+
+.next-previous {
+  margin: 0 20px 10px 20px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 25px; /* Đặt chiều rộng của nút */
+  height: 25px; /* Đặt chiều cao của nút */
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.next-previous:hover {
+  background-color: #636363;
+}

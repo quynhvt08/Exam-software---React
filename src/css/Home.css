@@ -1,0 +1,196 @@
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    background-image: linear-gradient(to right, #344e9c, #5a7ad9, #9eb2ef);
+    display: flex; /* Sử dụng flexbox để sắp xếp logo và tiêu đề */
+    align-items: center; /* Căn giữa các items  chiều dọc */
+  }
+  
+  .header h1 {
+    font-size: 25px;
+    color: white; /* Đổi màu chữ thành trắng cho dễ đọc trên nền tối */
+    margin-left: 20px; /* Thêm khoảng cách giữa logo và tiêu đề */
+    text-shadow: 0.3px 0.3px 0 rgba(255, 255, 255, 0.5),
+      /* Bóng màu sáng */ 1px 1px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  .header .logo {
+    height: 70px; /* Đặt kích thước logo */
+    width: auto; /* Giữ tỉ lệ của hình ảnh */
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-image: linear-gradient(to right, #1f3d9a, #5072da, #9eb2ef);
+  }
+  
+  .bgborder {
+    overflow: hidden;
+    background-image: linear-gradient(to right, #1f3d9a, #5072da, #9eb2ef);
+    height: 30px;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 9px ;
+    margin: 10px 20px 5px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    width: 45px; /* Đảm bảo chiều rộng và chiều cao là như nhau */
+    height: 40px;
+  }
+  
+  .topnav .right {
+    float: right;
+    border-radius: 50%;
+    background-color: rgb(70, 79, 115);
+  }
+  .topnav .right1 {
+    float: right;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+  
+  /* Change color on hover */
+  .topnav .right:hover {
+    background-color: #000000;
+  }
+  .topnav .right1:hover {
+    color: #000000;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {
+    float: left;
+    background-color: #f1f1f1;
+    width: 70%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    background-color: #f1f1f1;
+    width:30%;
+    text-align: center;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: rgb(230, 234, 255);
+    width: 100%;
+    padding: 20px;
+    border-radius: 0.35em;
+    margin: 0 0 20px 0;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 1em;
+  }
+  
+  .card h2 {
+    font-size: 20px;
+    color: rgb(228, 114, 0);
+    margin-bottom: 20px;
+  }
+  
+  .card h4 {
+    font-size: 16px;
+    color: rgb(57, 57, 57);
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .card h5 {
+    font-size: 16px;
+    color: rgb(71, 71, 71);
+  }
+  
+  .info-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse; /* Để viền giữa các ô trở nên như một */
+  }
+  
+  .info-row {
+    display: table-row;
+  }
+  
+  .info-cell {
+    display: table-cell;
+    padding: 10px;
+    border: 0px solid #d2d2d2; /* Đặt viền với màu xám nhạt */
+    background-color: rgb(230, 234, 255);
+  }
+  
+  .info-cell h4 {
+    margin: 0;
+  }
+  .info-cell:first-child {
+    width: 200px; /* Đặt chiều rộng cố định cho cột bên trái */
+  }
+  
+  .card img.bg{
+    width: 100%; /* Đặt chiều rộng cố định của ảnh */
+    border-radius: 0.9em;
+  }
+  
+  .card button.start {
+    background-color: #5175f8;
+    padding: 15px 30px;
+    border: none; /* hoặc border: 0; */
+    border-radius: 1.5em;
+    color: #f1f1f1;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block; /* Chuyển nút thành phần tử block */
+    margin: auto; /* Đặt margin tự động để căn giữa */
+    margin-top:10px ;
+  }
+  
+  .card button.start:hover {
+    background-color: #1b2bba;
+  }
+  /* Clear floats after the columns */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: rgb(168, 187, 255);
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+  

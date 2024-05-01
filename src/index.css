@@ -1,0 +1,729 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.formlogin {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, pink, #4e73df);
+}
+
+.formlogin .form {
+  display: block;
+  position: relative;
+}
+
+form .form-inner {
+  position: relative;
+  display: block;
+  background: white;
+  border-radius: 1.5em;
+  padding: 40px 80px;
+  z-index: 2;
+}
+@media (max-width: 1000px) {
+  .form-inner {
+    width: 650px;
+  }
+}
+/* CSS cho thiết bị với chiều rộng nhỏ hơn hoặc bằng 480px (ví dụ như điện thoại thông minh) */
+@media (max-width: 600px) {
+  .form-inner {
+    width: 400px;
+  }
+}
+
+form .form-inner .text-center {
+  text-align: center !important;
+  font-weight: bold;
+  color: #4e73df;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-shadow: 0.3px 0.3px 0 rgba(255, 255, 255, 0.5),
+    /* Bóng màu sáng */ 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+form .form-inner .form-group {
+  display: block;
+  width: auto;
+  margin: 20px auto;
+  position: relative;
+}
+
+form .btn-user {
+  font-size: 1rem;
+  border-radius: 10rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+.logo1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 7px 5px gainsboro;
+  border: 4px solid white;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  /* background-image: url('src/images/hcmue.png'); */
+}
+.logo1 img {
+  width: 100%; /* Kích thước hình ảnh là 100% chiều rộng của logo */
+  height: 100%; /* Kích thước hình ảnh là 100% chiều cao của logo */
+  object-fit: contain; /* Hiển thị hình ảnh mà không bị biến dạng */
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6e707e;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #d1d3e2;
+  border-radius: 0.35rem;
+  -webkit-transition: border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  color: #6e707e;
+  background-color: #fff;
+  border-color: #bac8f3;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.form-control-user {
+  font-size: 1rem;
+  border-radius: 10rem;
+  padding: 1.5rem 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #858796;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  border-radius: 0.35rem;
+  -webkit-transition: color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #456bdd;
+  border-color: #6f8eee;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #204eda;
+  border-color: #b6c0dc;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  -webkit-box-shadow: 0 0 0 0.1rem rgba(105, 136, 228, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(105, 136, 228, 0.5);
+}
+
+#togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #858796;
+}
+#togglePassword:hover {
+  color: #00e1ff; /* Thay đổi màu chữ khi hover */
+}
+
+.underlined {
+  border-bottom: 1px solid #ccc; /* Đặt màu và độ dày của đường kẻ */
+}
+
+.linkhcmue {
+  text-align: right;
+  text-decoration: none;
+  color: #6f8eee;
+  font-size: 13px;
+}
+
+.error {
+  color: #970202; /* Màu chữ đỏ */
+  background-color: #ffecec; /* Màu nền nhạt */
+  border: 1px solid #ffadad; /* Viền đỏ nhạt */
+  padding: 15px; /* Khoảng cách bên trong */
+  margin: 10px 0; /* Khoảng cách trên và dưới */
+  border-radius: 5px; /* Bo góc */
+  text-align: center;
+}
+
+/* ------------------Header,Body,Footer------------------------- */
+.header{
+  background-image: linear-gradient(to right, #344e9c, #5a7ad9, #9eb2ef);
+  display: flex; /* Sử dụng flexbox để sắp xếp logo và tiêu đề */
+  align-items: center; /* Căn giữa các items  chiều dọc */
+  padding: 15px;
+}
+
+.header h1 {
+  font-size: 20px;
+  color: white; /* Đổi màu chữ thành trắng cho dễ đọc trên nền tối */
+  margin-left: 20px; /* Thêm khoảng cách giữa logo và tiêu đề */
+  text-shadow: 0.3px 0.3px 0 rgba(255, 255, 255, 0.5),
+    /* Bóng màu sáng */ 1px 1px 0 rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.header .logo {
+  height: 70px; /* Đặt kích thước logo */
+  width: auto; /* Giữ tỉ lệ của hình ảnh */
+}
+
+.header-border{
+  overflow: hidden;
+  background-image: linear-gradient(to right, #1f3d9a, #5072da, #9eb2ef);
+  height: 25px;
+}
+
+.footer {
+  padding: 30px;
+  text-align: center;
+  background: rgb(168, 187, 255);
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* ------------------------------------- Home --------------------------------------------*/
+.home{
+background-color: white;
+}
+
+.home .leftcolumn {
+  float: left;
+  width: 70%;
+  background-color: #f1f1f1;
+}
+
+/* Right column */
+.home .rightcolumn {
+  float: left;
+  width:27%;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ /* Fake image */
+ .home .fakeimg {
+  background-color: rgb(231, 233, 255);
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 0.35em;
+}
+
+/* Add a card effect for articles */
+.home .card {
+  background-color: white;
+  padding: 20px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  /* border-bottom: 5px solid #d4aca1; Màu và kích thước của gạch ngang */
+}
+
+.card h3 {
+  font-size: 17px;
+  color: rgb(228, 114, 0);
+  margin-bottom: 20px;
+}
+
+.card h4 {
+  font-size: 14px;
+  color: rgb(57, 57, 57);
+}
+
+.home .info-table {
+  display: table;
+  width:  90%;
+  border-collapse: collapse; /* Để viền giữa các ô trở nên như một */
+}
+
+.home .info-row {
+  display: table-row;
+}
+
+.home .info-cell {
+  display: table-cell;
+  padding: 10px;
+  border: px solid #d2d2d2; /* Đặt viền với màu xám nhạt */
+  /* background-color: rgb(231, 233, 255); */
+}
+
+.home .info-cell h4 {
+  margin: 0;
+}
+
+.home .info-cell:first-child {
+  width: 30%; /* Đặt chiều rộng cố định cho cột bên trái */
+}
+
+.home .card img.bg{
+  width: 70%; /* Đặt chiều rộng cố định của ảnh */
+  display: block; /* Chuyển nút thành phần tử block */
+  margin: auto; /* Đặt margin tự động để căn giữa */
+}
+
+.home .card button.start {
+  background-color: #0077ff;
+  padding: 12px 20px;
+  border: none; /* hoặc border: 0; */
+  border-radius: 0.7em;
+  color: #f1f1f1;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block; /* Chuyển nút thành phần tử block */
+  margin: auto; /* Đặt margin tự động để căn giữa */
+  margin-top:10px ;
+  border-bottom: 2px solid rgb(16, 0, 122); /* Màu và kích thước của gạch ngang */
+}
+
+.home .card button.start:hover {
+  background-color: #1b2bba;
+}
+
+/* ------------------------------------ Exam Form --------------------------*/
+
+.ExamForm{
+ background-color: #ffffff;
+}
+
+.ExamForm .left-column {
+  float: left;
+  background-color: #ffffff;
+  width: 70%;
+  text-align: center;
+}
+
+/* Right column */
+.ExamForm .right-column {
+  float: left;
+  background-color: #ffffff;
+  width:30%;
+  text-align: center;
+}
+
+/* Add a card effect for articles */
+.ExamForm .card-left {
+  margin: 20px 20px 0 20px;
+}
+
+.ExamForm .card-left-answer {
+  margin: 20px 10px 0 20px;
+  padding: 20px 20px;
+  border-top: 2px solid #ccc; /* Định dạng viền: 1 pixel, solid (liền), màu xám */
+}
+
+.ExamForm .card-left img {
+  width: 100%;
+  height: 100%;
+  margin: 10px 10px 10px 10px;
+}
+.ExamForm .card-left .khung{
+  width: 50px;
+}
+
+label {
+  margin-right: 100px;
+  font-size: 20px;
+}
+
+/* Tạo kiểu cho nhãn của các nút radio */
+label span {
+  font-weight: bold;
+}
+
+/* Tạo kiểu cho nút radio */
+input[type="radio"] {
+  margin-right:10px;
+  transform: scale(1.5); /* Thay đổi kích thước của nút lên 1.5 lần */
+}
+
+/* Tạo kiểu cho phần hiển thị đáp án đã chọn */
+.selected-answer {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-left .form-infor-exam{
+  color: #007bff;
+  width:50%;
+}
+.card-left .form-infor-user{
+  color: #007bff;
+  width:50%;
+}
+
+.card-right {
+  background-color:  rgb(221, 229, 255);
+  padding: 20px;
+  height: 100%;
+}
+
+.card-right .time {
+  margin:20px 10px 10px 10px; /* Đặt phần tử .time ở bên phải */
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 24px; /* Giảm kích thước font */
+  padding: 8px 15px; /* Giảm khoảng cách padding */
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.card-h3{
+  color: #3400ae;
+  font-size: 20px;
+  font-weight: bold; /* Đặt chữ đậm */
+}
+.card-h4{
+  float: left;
+  color:  #de0202;
+  font-size: 20px;
+  font-weight: bold; /* Đặt chữ đậm */
+}
+
+
+.button-list {
+  margin-bottom: 20px;
+  text-align: left; /* hoặc text-align: initial; */
+  margin-top: 15px;
+}
+  
+.page-button {
+  margin: 10px 0 10px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  width: 45px; /* Đặt chiều rộng của nút */
+  height: 35px; /* Đặt chiều cao của nút */
+  font-size: 15px;
+  border-bottom: 2px solid rgb(16, 0, 122); /* Màu và kích thước của gạch ngang */
+}
+
+.table-quesitons{
+  margin: 15px 10px 10px 10px;
+  padding: 10px;
+  background-color: #545454;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.type {
+  margin: 15px 0px 10px 10px;
+  width: 20px; /* Đặt chiều rộng của nút */
+  height: 20px; /* Đặt chiều cao của nút */
+  border-radius: 50%;
+  display: flex; /* Sử dụng flexbox */
+  align-items: center; /* Canh giữa theo chiều dọc */
+}
+
+.type .text {
+  padding: 0 30px; /* Tạo khoảng cách giữa văn bản và nút */
+  white-space: nowrap; /* Chặn văn bản xuống hàng */
+}
+
+.page-button:hover {
+  background-color: #0056b3;
+}
+
+.next-previous {
+  margin: 0 20px 10px 20px;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 25px; /* Đặt chiều rộng của nút */
+  height: 25px; /* Đặt chiều cao của nút */
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.next-previous:hover {
+  background-color: #636363;
+}
+
+
+
+/* ------------------------------------ Giam Thi Form ------------------------------*/
+
+.khung-header {
+  position: relative; /* Đặt phần tử .khung-header là relative để có thể sử dụng z-index */
+  background-color: rgb(0, 0, 0);
+  align-items: center; /* Căn giữa các items  chiều dọc */
+}
+
+.khung-header .room {
+  position: absolute; /* Sử dụng vị trí tuyệt đối cho .room */
+  top: 0; /* Đặt vị trí top của .room là 0 */
+  left: 50%; /* Đặt vị trí left của .room là 50% để căn giữa */
+  transform: translateX(-50%); /* Dịch chuyển .room về bên trái 50% của chính nó */
+  margin: 0;
+  width: 150px;
+  height: 150px;
+  background-color: #051956;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column; /* Hiển thị các phần tử theo cột */
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Đặt phần tử .room ở layer cao hơn */
+}
+
+.khung-header .infor-room {
+  position: absolute; /* Sử dụng vị trí tuyệt đối cho .infor-room */
+  margin: 15px 0 0 0;
+  width: 100%;
+  height: 120px;
+  background-color: #162e77;
+  z-index: 1; /* Đặt phần tử .infor-room ở layer thấp hơn */
+}
+
+.khung-header .infor-room .left{
+  float: left;
+  padding: 20px;
+}
+
+.khung-header .infor-room .right{
+  float: right;
+  padding: 20px;
+}
+
+.btn-out{
+padding: 8px;
+border-radius: 0.5em;
+cursor: pointer;
+font-weight: bold;
+}
+
+.btn-out:hover{
+background-color: #e6e6e6;
+}
+
+.khung-header .status {
+  width: 100%;
+  position:absolute;
+  margin-top: 160px;
+  padding-bottom: 100px;
+}
+
+.khung-header  h2 {
+  font-size: 30px;
+  color: rgb(255, 247, 0);
+  margin: 0; /* Thay đổi margin để chữ nằm giữa */
+}
+
+.khung-header .tille {
+font-size: 16px;
+color: #ffffff;
+font-weight: bold;
+margin: 0 0 10px; /* Thay đổi margin để chữ nằm giữa */
+}
+
+.khung-header .user-giamthi{
+padding: 10px;
+color: #ffffff;
+font-size: 16px;
+font-weight: bold;
+background-color:rgb(72, 74, 108);
+margin-bottom: 10px;
+text-align: center;
+border-radius: 3em;
+}
+
+.khung-header .thisinh{
+padding: 10px;
+color: #ed0000;
+background-color:rgb(255, 202, 176);
+width: 15%;
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 20px;
+margin-left: 40px;
+text-align: center;
+}
+
+.status-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  z-index: 999; /* Đảm bảo thanh trạng thái nổi hiển thị trên cùng */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-container button {
+  flex: 1;
+  text-align: center;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff;
+  border: px solid white;
+  background-color: #1f1f1f;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  /* border-top-left-radius: 50px;
+  border-top-right-radius: 50px; */
+  /* border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 30%; */
+}
+
+.button-container button p {
+  margin: 0;
+  font-size: 22px;
+  color: #006aff;
+} 
+
+.pc-container {
+  display: flex; /* Sử dụng flexbox để hiển thị các card trên cùng một hàng ngang */
+  flex-wrap: wrap; /* Cho phép các card tự động xuống dòng nếu không đủ không gian */
+}
+
+.pc-card {
+  width: calc(22%); /* 25% chiều rộng của container với khoảng cách 10px giữa các card */
+  margin: 0 0 30px 30px; /* Khoảng cách dưới cùng của mỗi card */
+  border: 1px solid #c7c7c7;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.pc-card img{
+  width: 50%;
+  display: block; /* Chuyển nút thành phần tử block */
+  margin: auto; /* Đặt margin tự động để căn giữa */
+}
+
+.pc-info {
+  padding: 15px;
+}
+
+.pc-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.pc-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.pc-status {
+  font-size: 14px;
+  color: #c70000;
+  margin-bottom: 15px;
+}
+
+.pc-user-infor{
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 0.35em;
+}
+
+.pc-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #004894;
+}
+
+.btn-recover {
+  float: right;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-recover:hover {
+  background-color: #0056b3;
+}
+
+
+
+
