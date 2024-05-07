@@ -5,10 +5,13 @@ import App from './App';
 import GiamThiForm from './components/GiamThiForm';
 import Home from './components/Home';
 import reportWebVitals from './reportWebVitals';
+import HoiDongForm from './components/HoiDongForm';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App/>
+    {/* <HoiDongForm/> */}
   </React.StrictMode>
 );
 

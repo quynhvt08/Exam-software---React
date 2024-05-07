@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import ExamForm from './components/./ExamForm';
 import LoginForm from './components/LoginForm';
 import GiamThiForm from './components/GiamThiForm';
+import HoiDongForm from './components/HoiDongForm';
+import FormXemThi from './components/FormXemThi';
 
 function App() {
   const User = {
@@ -12,6 +14,10 @@ function App() {
   }
   const GiamThi = {
     taikhoan: "giamthi",
+    password: "12345"
+  }
+  const Quantri = {
+    taikhoan: "quantri",
     password: "12345"
   }
 
@@ -28,6 +34,12 @@ function App() {
     })
   }else if (details.taikhoan === GiamThi.taikhoan && details.password === GiamThi.password) {
     console.log("Đăng nhập thành công (GiamThi).");
+    setUser({
+      taikhoan: details.taikhoan
+    })
+    // Redirect or do something else for admin login success
+  }else if (details.taikhoan === Quantri.taikhoan && details.password === Quantri.password) {
+    console.log("Đăng nhập thành công (Quantri).");
     setUser({
       taikhoan: details.taikhoan
     })
@@ -53,6 +65,9 @@ function App() {
               user.taikhoan !== "" ? (
                 user.taikhoan === GiamThi.taikhoan ? (
                   <GiamThiForm/>
+                ):
+                user.taikhoan === Quantri.taikhoan ? (
+                  <HoiDongForm/>
                 ) : (
                   <Home/>
                 )
@@ -64,6 +79,8 @@ function App() {
             }
           />
           <Route path="/examform" element={<ExamForm/>} />
+          <Route path="/hoidongform" element={<HoiDongForm/>} />
+          <Route path="/formxemthi" element={<FormXemThi/>} />
         </Routes>
       </div>
     </Router>

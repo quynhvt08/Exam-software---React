@@ -216,18 +216,20 @@ form .btn-user {
   display: flex; /* Sử dụng flexbox để sắp xếp logo và tiêu đề */
   align-items: center; /* Căn giữa các items  chiều dọc */
   padding: 15px;
+  position: relative;
 }
 
 .header h1 {
   font-size: 20px;
   color: white; /* Đổi màu chữ thành trắng cho dễ đọc trên nền tối */
-  margin-left: 20px; /* Thêm khoảng cách giữa logo và tiêu đề */
+  margin-left: 50px; /* Thêm khoảng cách giữa logo và tiêu đề */
   text-shadow: 0.3px 0.3px 0 rgba(255, 255, 255, 0.5),
     /* Bóng màu sáng */ 1px 1px 0 rgba(0, 0, 0, 0.5);
   letter-spacing: 1px;
 }
 
 .header .logo {
+  margin-left: 37px;
   height: 70px; /* Đặt kích thước logo */
   width: auto; /* Giữ tỉ lệ của hình ảnh */
 }

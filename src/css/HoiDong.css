@@ -1,0 +1,232 @@
+body{
+  margin: 0;
+  background-color: #ffffff;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header-sidebar {
+  width: 80%;
+  background-color: #ffffff;
+  padding: 10px;
+  float: right;
+  position: relative;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Áp dụng viền bóng */
+}
+
+.header-sidebar h2{
+  color: #262930;
+  margin-left:30px ;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.header-sidebar .user{
+  float: right;
+}
+
+.header-sidebar button{
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+  color: rgb(94, 94, 94);
+  border-left: 1px solid rgb(82, 82, 82) ;
+  background-color: #fff;
+}
+
+.sidebar {
+  width: 20%;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  background-color: #03143f;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto; /* Hiển thị thanh cuộn dọc khi cần thiết */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-shadow: 0px 2px 6px rgb(0, 21, 104); /* Áp dụng viền bóng */
+}
+
+
+
+
+.sidebar img {
+    margin: 20px 0 20px 0;
+    width: 60%;
+    align-self: center;
+}
+
+.sidebar a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 13.5px;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo rằng padding không tăng kích thước của phần tử */
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn giữa văn bản theo chiều dọc */
+}
+
+  .sidebar h4{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 14.5px;
+  }
+
+
+  .sidebar i{
+    margin-right:10px;
+  }
+
+  .logout{
+    padding: 10px;
+    background-color: #042e98;
+  }
+
+  .sidebar a.active {
+    background-color: #011958;
+    color: white;
+    border-bottom: 2px solid #03143f;
+  }
+
+  .sidebar a.active:hover{
+    background-color: #062268;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active):not(.link){
+    background-color:  #042e98;
+    color: white;
+  }
+
+  .sidebar a:not(.active):not(.link):after {
+    content: '\276F'; /* Mã Unicode của biểu tượng fa-angle-right */
+    margin-left: auto;
+    font-size: 14px;
+  }
+
+  .sidebar a.link {
+    color: white;
+    font-size: 13px;
+  }
+
+  .sidebar a.link:before {
+    content: '\25B6'; /* Mã Unicode của biểu tượng fa-angle-right */
+    margin-right: 10px;
+    font-size: 9px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+  .content {
+    width: 80%;
+    padding: 10px;
+    float: right;
+  }
+
+  .thongke {
+    display: flex; 
+    flex-wrap: wrap; 
+    position: relative;
+
+  }
+
+  .stats-container {
+    flex: 1 1 20%; /* Độ rộng của mỗi phần tử */
+    margin: 15px; /* Khoảng cách giữa các phần tử */
+    padding: 20px; /* Khoảng cách nội dung với viền */
+    background-color: pink;
+    border-bottom: 5px solid palevioletred;
+    border-radius: 0.75em;
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động */
+    box-shadow: 0px 2px 6px rgb(182, 182, 182); /* Áp dụng viền bóng */
+}
+
+.stats-container:hover {
+    transform: translateY(-5px); /* Di chuyển phần tử lên trên khi hover */
+}
+
+.stats-container.yellow {
+  background-color: rgb(255, 252, 192);
+  border-bottom:5px solid rgb(202, 196, 97);
+} 
+.stats-container.blue {
+  background-color: rgb(127, 219, 255);
+  border-bottom:5px solid rgb(28, 130, 212) ;
+}
+
+.stats-container.green {
+  background-color: aquamarine;
+  border-bottom:5px solid rgb(26, 174, 124) ;
+}
+
+.stats-container-cathi {
+  margin: 20px;
+  padding: 20px;
+  display: flex; /* Sử dụng flexbox */
+  border-radius: 0.75em;
+  background-color: rgb(211, 211, 211);
+  border-bottom:px solid rgb(69, 69, 69);
+  box-shadow: 0px 2px 5px rgb(114, 114, 114); /* Áp dụng viền bóng */
+}
+
+.icon {
+    width: 10px; /* Độ rộng của icon */
+    height: 30px; /* Chiều cao của icon */
+    /* Thêm các thuộc tính khác cho icon nếu cần */
+}
+
+.stats {
+    flex: -1; /* Phần còn lại của không gian */
+}
+
+.value {
+    margin-bottom: 10px;
+    font-size: 24px; /* Kích thước của giá trị */
+    font-weight: bold;
+}
+
+.label {
+    font-size: 14px; /* Kích thước của nhãn */
+    color: #333; /* Màu sắc của nhãn */
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.copyright {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  padding: 10px;
+  color: #282828;
+}
+
+.copyright a {
+  text-decoration: none;
+}
+
